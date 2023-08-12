@@ -1,2 +1,3 @@
-# React-part1
-Learning the react basics
+# React + Vite
+
+React basics
