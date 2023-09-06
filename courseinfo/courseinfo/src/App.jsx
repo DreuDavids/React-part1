@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 const App = () => {
   const course = "Half Stack application development";
   const part1 = "Fundamentals of React";
@@ -11,19 +12,21 @@ const App = () => {
     return <h1>{course}</h1>;
   };
 
+  const Part = (props) => {
+    return (
+      <p>
+        {props.part} {props.exercise}
+      </p>
+    );
+  };
+
   const Content = () => {
     return (
-      <>
-        <p>
-          {part1} {exercises1}
-        </p>
-        <p>
-          {part2} {exercises2}
-        </p>
-        <p>
-          {part3} {exercises3}
-        </p>
-      </>
+      <div>
+        <Part part={part1} exercise={exercises1} />
+        <Part part={part2} exercise={exercises2} />
+        <Part part={part3} exercise={exercises3} />
+      </div>
     );
   };
 
